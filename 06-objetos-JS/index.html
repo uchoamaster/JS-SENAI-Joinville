@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    var cadeira = {
+        cor: "Preta",
+        altura: 118,
+        largura: 74,
+        profundidade: 64
+    };
+
+    document.write("Cor da cadeira: "+ cadeira.cor + "<br>");
+    document.write("Altura da cadeira: "+ cadeira.altura + "<br>");
+    document.write("Largura da cadeira: "+ cadeira.largura + "<br>");
+    document.write("Profundidade da cadeira: "+ cadeira.profundidade + "<br>");
+
+    cadeira.cor = "Branca";
+
+    document.write("Cor da cadeira: "+ cadeira.cor + "<br>");
+
+    cadeira.peso = 17;
+
+    document.write("Peso da cadeira: "+ cadeira.peso + "<br>");
+
+    delete cadeira.profundidade;
+    document.write("Profundidade da cadeira: "+ cadeira.profundidade + "<br>");
+
+
+    /*não literal*/
+
+    var mesa = new Object();
+    mesa.cor = "Azul";
+    mesa.largura = 220;
+    mesa.altura = 70;
+
+    document.write("Cor da mesa: "+ mesa.cor + "<br>");
+    document.write("Largura da mesa: "+ mesa.largura + "<br>");
+    document.write("Altura da mesa: "+ mesa.altura + "<br>");
+
+
+</script>

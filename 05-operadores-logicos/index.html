@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    /**
+     * && = e - retorna TRUE se ambos os operdores forem verdadeiros
+     * || = ou - retorna TRUE se um ou outro for verdadeiro
+     * ! = Não/Not - retorna TRUE se o operador não é verdadeiro
+    */
+
+   var nota = 8 ;
+   var falta = 27;
+        //false       //true
+   if((nota < 4) || (falta > 25)){
+    document.write("Nota: " + nota + " | Status: <em>Reprovado por falta</em> | Quantidade de Faltas: "+falta+ "<br>");
+   }
+
+   nota = 2;
+   falta = 27;
+        //true       //true
+   if((nota < 4) && (falta > 25)){
+    document.write("Nota: " + nota + " | Status: <em>Reprovado por falta</em> | Quantidade de Faltas: "+falta+ "<br>");
+   }
+var situacao = !true
+
+document.write("Situação: " + situacao+ "<br>");
+</script>
