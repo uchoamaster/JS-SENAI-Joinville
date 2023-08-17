@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exibir resultado aluno</title>
+</head>
+<body>
+<script>
+
+    function printResultado(nota) {
+
+        if (typeof nota === 'number') {
+
+            if (nota >= 7) {
+                console.log("Passou de ano! ")
+            } else if (nota  >= 5) {
+                console.log("Ficou em recuperação! ")
+            } else {
+                console.log("Reprovado! ")
+            }
+
+        } else {
+            console.log("Informe um número para nota!")
+        }
+
+    }
+
+</script>
+</body>
+</html>
