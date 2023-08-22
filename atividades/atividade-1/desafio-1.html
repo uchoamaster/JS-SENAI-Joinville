@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Comprar produtos</title>
+</head>
+<body>
+
+<select id="selectOptions"/>
+<button id="comprarProduto">Comprar produto selecionado</button>
+<h1 id="produto"></h1>
+
+<script>
+
+    var elementSelect = document.getElementById("selectOptions");
+    var elementButton = document.getElementById("comprarProduto");
+    var elementProduto = document.getElementById("produto");
+
+    elementProduto.textContent = "Selecione um produto para compra!";
+
+    var produtos =
+
+    [
+        {
+            quantidade: 10,
+            descricao: 'Suco'
+        },
+        {
+            descricao: "Refrigerante",
+            quantidade: 10
+        },
+        {
+            descricao: "Sorvete",
+            quantidade: 10
+        }
+    ];
+
+    for (let i = 0; i < produtos.length; i++) {
+        elementSelect.options[i] = new Option(produtos[i].descricao, produtos[i].descricao);
+    }
+
+    elementButton.addEventListener('click', () => {
+        comprarProduto(elementSelect.value);
+    });
+
+    function comprarProduto(strProdutoSelecionado) {
+
+        if (strProdutoSelecionado) {
+
+            var produtoSelecionado = produtos.filter(prod => prod.descricao.toUpperCase() === strProdutoSelecionado.toUpperCase())[0];
+
+            switch (produtoSelecionado.descricao.toUpperCase()) {
+
+                case "REFRIGERANTE":
+
+                    if (produtoSelecionado.quantidade > 0) {
+
+                        produtoSelecionado.quantidade--;
+
+                        elementProduto.textContent = "Refrigerante comprado com sucesso! ";
+
+                    } else {
+                        elementProduto.textContent = "Produto indisponível! ";
+                    }
+
+                    break;
+
+                case "SUCO":
+
+
+                    if (produtoSelecionado.quantidade > 0) {
+
+                        produtoSelecionado.quantidade--;
+
+                        elementProduto.textContent = "Suco comprado com sucesso! ";
+
+                    } else {
+                        elementProduto.textContent = "Produto indisponível! ";
+                    }
+
+                    break;
+
+                case "SORVETE":
+
+                    if (produtoSelecionado.quantidade > 0) {
+
+                        produtoSelecionado.quantidade--;
+
+                        elementProduto.textContent = "Suco comprado com sucesso! ";
+
+                    } else {
+                        elementProduto.textContent = "Produto indisponível! ";
+                    }
+
+                    break;
+
+
+                default:
+
+                    elementProduto.textContent = "Produto esgotado"
+
+                    break;
+
+            }
+
+        }
+
+    }
+
+</script>
+</body>
+</html>
