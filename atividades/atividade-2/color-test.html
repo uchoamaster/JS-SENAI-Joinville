@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Testes Cor</title>
+</head>
+<body>
+<div>
+    <label>Cód. Hex.</label>
+    <input id="input-hex"/>
+</div>
+<div>
+    <button id="button-imprimir">Imprimir cor</button>
+</div>
+<strong id="color"></strong>
+<script>
+
+    var inputHex = document.getElementById('input-hex');
+    var button = document.getElementById('button-imprimir');
+    var color = document.getElementById('color');
+
+    button.addEventListener('click', () => {showColor()})
+
+
+    function showColor() {
+
+        let hexColor = inputHex.value;
+
+        if (hexColor) {
+
+            const rgb = getRgbByHexadecimal(hexColor);
+
+            color.innerHTML = getColor(rgb);
+
+        } else {
+            color.innerHTML = 'Informe um hexadecimal para mostrar a cor!'
+        }
+
+
+    }
+
+
+    function getRgbByHexadecimal(hex) {
+
+        var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+
+        return result ? {
+            r: parseInt(result[1], 16),
+            g: parseInt(result[2], 16),
+            b: parseInt(result[3], 16)
+        } : null;
+
+    }
+
+    function getColor(rgb) {
+
+        if (isRed(rgb)) {
+            return 'Vermelho';
+        }
+
+    }
+
+    function isRed(rgb) {
+        return (rgb.r <= 255 && rgb.r >= 190) && (rgb.g >= 0 && rgb.g <= 75) && (rgb.b >= 0 && rgb.b <= 75);
+    }
+
+
+</script>
+</body>
+</html>
