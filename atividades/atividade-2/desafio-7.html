@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Posição do animal</title>
+</head>
+<body>
+<script>
+//Crie um array de forma literal que armazene os nomes de cinco animais diferentes e, em seguida, crie uma função que retorne uma mensagem indicando a posição do animal informado no array.
+
+    var animais = ['Leão', 'Vaca', 'Lobo', 'Urso', 'Aranha', 'Leopardo', "Baleia"]
+
+
+    function printPosicaoAnimal(nomeAnimal) {
+
+        if (nomeAnimal && typeof nomeAnimal === 'string') {
+
+            if (isPresent(nomeAnimal)) {
+                console.log('Animal está na posição: ' + getPosicaoAnimal(nomeAnimal));
+            } else {
+                console.log('Animal não encontrado')
+            }
+
+        } else {
+            console.log('Informe uma string válida para busca da posição do animal! ')
+        }
+
+    }
+
+    function getPosicaoAnimal(nomeAnimal) {
+        return animais.map(animal => animal.toUpperCase()).indexOf(nomeAnimal.toUpperCase())
+    }
+
+    function isPresent(nomeAnimal) {
+        return animais.filter(animal => animal.toUpperCase() === nomeAnimal.toUpperCase()).length;
+    }
+
+
+</script>
+</body>
+</html>
