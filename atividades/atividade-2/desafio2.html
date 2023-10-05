@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Count chars</title>
+</head>
+<body>
+<script>
+
+// Crie uma função que receba um array de strings e retorne o número total de caracteres.
+
+function countChars(strings) {
+
+    if (strings && strings.length) {
+
+        let countChars = 0;
+        let unvalidList = strings.filter(str => typeof str !== 'string');
+
+        if (unvalidList && unvalidList.length) {
+            console.log("Informe apenas strings para o método!");
+        } else {
+
+            strings.forEach(str => countChars += str.length)
+
+            console.log("Quantidade de caracteres: " + countChars)
+
+        }
+
+
+    } else {
+        console.log("Informe um array de string válido")
+    }
+
+}
+
+
+</script>
+</body>
+</html>

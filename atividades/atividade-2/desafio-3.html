@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Retorna email</title>
+</head>
+<body>
+<script>
+    // Crie um array associativo que armazene o nome e o e-mail de três pessoas diferentes e, em seguida, crie uma função que retorne o e-mail de uma pessoa com base no seu nome.
+    var arrayPessoas = [
+        {
+            nome: 'Nicolas',
+            email: 'nicolas@gmail.com'
+        },
+        {
+            nome: 'Leandro',
+            email: 'leandro@gmail.com'
+        },
+        {
+            nome: 'Chloe',
+            email: 'chloe@gmail.com'
+        }
+    ];
+
+    function getEmailByNome(strNome) {
+
+        if (strNome && typeof strNome === 'string') {
+            console.log(arrayPessoas.filter(pessoa => pessoa.nome.toUpperCase() === strNome.toUpperCase()).map(pessoa => pessoa.email)[0])
+        } else {
+            console.log("Informe o nome da pessoa em formato de string! ");
+        }
+
+    }
+
+
+
+</script>
+</body>
+</html>

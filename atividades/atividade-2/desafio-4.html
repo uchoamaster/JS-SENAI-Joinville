@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Frutas Array</title>
+</head>
+<body>
+<script>
+    // Crie um array de forma literal que armazene os nomes de cinco frutas diferentes e, em seguida, crie uma função que retorne uma mensagem indicando se a fruta informada está presente ou não no array.
+
+    var frutasArray = ['Morango', 'Limão', 'Laranja', 'Abacaxi']
+
+    function existsFruta(nome) {
+
+        if (nome && typeof nome === 'string') {
+
+            if (isPresent(nome)) {
+                console.log("Fruta existe!")
+            } else {
+                console.log("Fruta não existe!")
+            }
+
+        } else {
+            console.log("Informe uma string válida para busca das frutas!")
+        }
+
+    }
+
+
+    function isPresent(nome) {
+        return frutasArray.filter(fruta => fruta.toUpperCase() === nome.toUpperCase()).length;
+    }
+
+
+</script>
+</body>
+</html>

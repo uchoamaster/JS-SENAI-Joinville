@@ -1,0 +1,11 @@
+
+E agora teremos mais 4 atividades com um grau maior de complexidade. Peço que se esforcem para não deixar acumular, grande abraço !
+
+Crie uma função que receba uma string e retorne o número de vogais presentes nessa string.
+
+Crie uma função que receba um número e retorne o fatorial desse número.
+
+3.Crie um formulário HTML que tenha um campo de entrada de texto para o nome e outro para o e-mail. Em seguida, crie uma função JavaScript que valide se os campos foram preenchidos corretamente (ou seja, se o campo de nome não está vazio e se o campo de e-mail contém um endereço de e-mail válido).
+
+4.Crie um formulário HTML que tenha um campo de entrada de número para a idade e outro para a altura em centímetros. Em seguida, crie uma função JavaScript que valide se os campos foram preenchidos corretamente (ou seja, se a idade está entre 18 e 60 anos e se a altura está entre 150 e 200 centímetros).
+
