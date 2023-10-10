@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Get Email by name</title>
+</head>
+<body>
+    <script>
+
+        var pessoas = [
+            {
+                nome: 'Nicolas',
+                email: 'nicolas.souza@gmail.com'
+            },
+            {
+                nome: 'Lucas',
+                email: 'lucas.meier@gmail.com'
+            },
+            {
+                nome: 'Mateus',
+                email: 'mateus.nietzel@gmail.com'
+            },
+            {
+                nome: 'Vitor',
+                email: 'vitor@gmail.com'
+            }
+        ]
+
+        function getEmailByNome(nome) {
+
+            if (nome && nome.length) {
+
+                var pessoa = pessoas.find(p => p.nome.toUpperCase() === nome.toUpperCase());
+
+                if (pessoa != null) {
+                    return pessoa.email;
+                }
+
+            } else {
+                return null;
+            }
+
+
+        }
+
+    </script>
+</body>
+</html>
