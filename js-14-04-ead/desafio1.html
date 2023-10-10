@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Max Value</title>
+</head>
+<body>
+    <script>
+
+        function returnMaxValue(lsNumbers) {
+
+            if (lsNumbers && lsNumbers.length) {
+
+                return lsNumbers.sort((function(a, b) {
+                    return a - b;
+                }))[lsNumbers.length - 1];
+
+            } else {
+                return null;
+            }
+
+        }
+
+    </script>
+</body>
+</html>
