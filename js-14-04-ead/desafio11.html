@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fatorial of number</title>
+</head>
+<body>
+<!--Crie uma função que receba um número e retorne o fatorial desse número.-->
+<script>
+
+  function getFatorialOfNumber(number) {
+
+    let factorial = 1;
+
+    if (number > 0) {
+
+      for (let i = 1; i <= number; i++) {
+           factorial = factorial * i;
+      }
+
+      return factorial;
+
+    } else {
+      return null;
+    }
+
+  }
+
+</script>
+</body>
+</html>
