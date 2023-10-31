@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Form name and gmail</title>
+</head>
+<body>
+<form>
+    <div class="row">
+        <div class="col-lg-3">
+            <label>Nome</label>
+            <input type="text" id="name">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3">
+            <label>Gmail</label>
+            <input type="text" id="gmail">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3">
+            <button id="button">Send</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3">
+            <label id="validacoes"></label>
+        </div>
+    </div>
+</form>
+<script>
+
+    const inputName = document.getElementById('name');
+    const inputGmail = document.getElementById('gmail');
+    const button = document.getElementById('button');
+
+    button.addEventListener('click', validateFields())
+
+    function validateFields() {
+
+        let name = inputName.value;
+        let email = inputGmail.value;
+
+
+        if (email && emailValido(gmail)) {
+
+        }
+
+        if (name) {
+
+        }
+
+    }
+
+    function emailValido() {
+
+        var re = /\S+@\S+\.\S+/;
+
+        return re.test($ctrl.emailSelecionado);
+
+    }
+
+<!--    3.Crie um formulário HTML que tenha um campo de entrada de texto para o nome e outro para o e-mail. Em seguida, crie uma função JavaScript que valide se os campos foram preenchidos corretamente (ou seja, se o campo de nome não está vazio e se o campo de e-mail contém um endereço de e-mail válido).-->
+</script>
+</body>
+</html>

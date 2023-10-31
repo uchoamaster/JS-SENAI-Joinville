@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Count chars list string</title>
+</head>
+<body>
+    <script>
+
+        function countCharsList(lsStrings) {
+
+            if (lsStrings && lsStrings.length) {
+
+                var countChars = 0;
+
+                lsStrings.forEach(function(str) {
+                    countChars += str.length;
+                });
+
+                return countChars;
+
+            } else {
+                return 0;
+            }
+
+        }
+
+    </script>
+</body>
+</html>

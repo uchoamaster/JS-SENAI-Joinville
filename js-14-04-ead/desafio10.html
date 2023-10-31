@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>number of vogais</title>
+</head>
+<body>
+
+<!--Crie uma função que receba uma string e retorne o número de vogais presentes nessa string.-->
+
+<script>
+
+    function getNumberOfVogais(word) {
+
+        let vogais = ['a', 'e', 'i', 'o', 'u']
+
+        let countVogais = 0;
+
+        if (word && word.length) {
+
+            for (let wordKey in word) {
+
+                if (vogais.indexOf(word[wordKey].toLowerCase()) != -1) {
+                    countVogais ++;
+                }
+
+            }
+
+        }
+
+        return countVogais;
+
+    }
+
+</script>
+
+</body>
+</html>
